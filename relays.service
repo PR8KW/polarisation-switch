@@ -1,0 +1,12 @@
+[Unit]
+Description=Polarization Relay's
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/polarisation-switch
+ExecStart=/usr/bin/python /home/pi/polarisation-switch/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
